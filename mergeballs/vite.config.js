@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: '/docs/',
   optimizeDeps: {
-    base: '/docs/',
     exclude: ['@babylonjs/gui']
   }
 });
