@@ -239,7 +239,7 @@ function addBalls() {
 function createBall(name, position) {
     const ball = MeshBuilder.CreateSphere(name, {segments: 32, diameter: ballData[name].size});
     const ballMat = new StandardMaterial("ballMat");
-    ballMat.diffuseTexture = new Texture(`./res/${name}.jpg`);
+    ballMat.diffuseTexture = new Texture(`./${name}.jpg`);
     if(name !== 'bowling' && name !== 'eightball') ballMat.specularColor = new Color3(0, 0, 0);
     ball.material = ballMat;
     ball.position = position;
@@ -261,7 +261,7 @@ function randomPlayerBall(limit) {
     playerBall = MeshBuilder.CreateSphere(key, {segments: 32, diameter: ballData[key].size});
 
     const ballMat = new StandardMaterial("ballMat");
-    ballMat.diffuseTexture = new Texture(`./res/${key}.jpg`);
+    ballMat.diffuseTexture = new Texture(`./${key}.jpg`);
     if(key !== 'bowling' && key !== 'eightball') ballMat.specularColor = new Color3(0, 0, 0);
     playerBall.material = ballMat;
     if(lastPos) playerBall.position = lastPos;
@@ -318,9 +318,9 @@ function buildContainer() {
     const plane4 = plane1.clone("plane4");
 
     const groundMat = new StandardMaterial("groundMat");
-    groundMat.diffuseTexture = new Texture("./res/crate-bottom.jpg")
+    groundMat.diffuseTexture = new Texture("./crate-bottom.jpg")
     const planeMat = new StandardMaterial("planeMat");
-    planeMat.diffuseTexture = new Texture("./res/crate-side.jpg");
+    planeMat.diffuseTexture = new Texture("./crate-side.jpg");
 
     ground.material = groundMat;
     plane1.material = planeMat;
