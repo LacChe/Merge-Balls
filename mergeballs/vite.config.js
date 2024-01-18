@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   optimizeDeps: {
-    base: './docs',
+    base: './merge-balls/docs',
     exclude: ['@babylonjs/gui']
   }
 });
