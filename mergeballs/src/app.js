@@ -97,7 +97,7 @@ function initBabylon() {
     joystick = nipplejs.create({
         zone: document.getElementById('joystick-wrapper'),
         mode: 'static',
-        size: 150,
+        size: 200,
         threshold: 0.01,
         position: { left: '8vh', bottom: '8vh' }
     });
